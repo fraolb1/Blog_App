@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+$lightGreen: #b9e7e7;
+
+body {
+  margin: 0;
+  .app {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    .container {
+      width: 80vw;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+      }
+      // Login and Register
+
+      .auth {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: $lightGreen;
+
+        h1 {
+          color: teal;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          gap: 20px;
+          width: 20vw;
+          text-align: center;
+
+          input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 1px solid gray;
+            font-family: "Poppins";
+          }
+
+          button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-family: "Poppins";
+            cursor: pointer;
+            background-color: teal;
+            color: white;
+          }
+
+          p {
+            color: red;
+            text-align: center;
+          }
+        }
+      }
+
+      // NAVBAR
+      .navbar {
+        margin-bottom: 20px;
+        .container {
+          padding: 10px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .logo {
+            font-family: cursive;
+            color: teal;
+            font-weight: bold;
+            font-size: 30px;
+          }
+          .links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            h6 {
+              font-weight: 300;
+              font-size: 16px;
+            }
+            span {
+              cursor: pointer;
+            }
+            .write {
+              background-color: $lightGreen;
+              padding: 7px;
+              border-radius: 5px;
+              border: 1px solid white;
+
+              &:hover {
+                background-color: white;
+                color: teal;
+                border: 1px solid teal;
+              }
+            }
+          }
+        }
+      }
+      //Footer
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-top: gray solid 1px;
+        margin-top: 40px;
+      }
+
+      //Home
+
+      .home {
+        .posts {
+          display: flex;
+          flex-direction: column;
+          gap: 150px;
+
+          .post {
+            display: flex;
+            gap: 100px;
+
+            &:nth-child(2n + 1) {
+              flex-direction: row-reverse;
+            }
+
+            .img {
+              flex: 3;
+              position: relative;
+              &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: $lightGreen;
+                position: absolute;
+                top: 20px;
+                left: -20px;
+                z-index: -1;
+              }
+
+              img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+              }
+            }
+
+            .content {
+              flex: 5;
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: space-between;
+
+              button {
+                background-color: white;
+                padding: 10px;
+                width: 25%;
+                color: teal;
+                border: 1px solid teal;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                  border: 1px solid white;
+                  background-color: teal;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      //Single
+
+      .single {
+        display: flex;
+        gap: 50px;
+        .content {
+          flex: 5;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          img {
+            width: 100%;
+            height: 300px;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 30px;
+          }
+
+          .user {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+            span {
+              font-weight: bold;
+            }
+            .info {
+              p {
+                margin: 0;
+              }
+            }
+            .edit {
+              display: flex;
+              gap: 10px;
+              width: 100%;
+
+              .E {
+                background-color: greenyellow;
+                color: white;
+                padding: 10px;
+                border-radius: 50px;
+                text-decoration: none;
+              }
+              .D {
+                background-color: red;
+                color: white;
+                padding: 10px;
+                border-radius: 50px;
+              }
+            }
+          }
+        }
+
+        .menu {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          h1{
+            font-size: 25px;
+            color: #555;
+            margin: 0;
+          }
+
+          .post{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+
+            h2{
+                color: #555;
+                margin: 0;
+            }
+
+            button{
+                border: 1px solid teal;
+                padding: 10px;
+                background-color: white;
+                color: teal;
+
+                &:hover{
+                    background-color: teal;
+                    color: white;
+                    border: 1px solid white;
+                }
+                
+            }
+
+            h2{
+                font-size: 20px
+            }
+
+            img{
+                width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
